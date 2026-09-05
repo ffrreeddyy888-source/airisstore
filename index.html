@@ -393,6 +393,44 @@
 
   .hero-ring{ margin-top:3.4rem; opacity:0.9; }
 
+  .anniversary-hero{
+    min-height:92vh;
+    padding-top:150px;
+    background:linear-gradient(135deg, rgba(255,246,244,0.78), rgba(247,225,229,0.46)), radial-gradient(circle at 82% 18%, rgba(198,83,104,0.16), transparent 30%);
+  }
+  .anniversary-hero .hero-eyebrow{ margin-bottom:1.1rem; }
+  .anniversary-hero h1{ max-width:900px; font-size:clamp(3rem, 7.8vw, 6.7rem); }
+  .anniversary-hero h1 em{ display:block; }
+  .anniversary-hero .sub{ max-width:610px; }
+  .hero-meta{ display:flex; justify-content:center; gap:0.8rem; flex-wrap:wrap; margin:0 auto 2rem; }
+  .hero-meta span{ padding:0.7rem 1rem; border:1px solid rgba(198,83,104,0.2); border-radius:999px; background:rgba(255,255,255,0.48); color:var(--ink-soft); font-size:0.85rem; }
+  .hero-meta strong{ color:var(--ink); font-weight:500; }
+  .anniversary-process{ background:rgba(255,246,244,0.72); }
+  .anniversary-process .process-step{ position:relative; }
+  .anniversary-process .process-step:not(:last-child)::after{ content:'→'; position:absolute; top:1.4rem; right:-1.35rem; color:var(--gold-soft); font-size:1.4rem; }
+  .process-step .step-number{ display:block; margin-bottom:0.7rem; color:var(--love); font-size:0.75rem; letter-spacing:0.2em; }
+  .store-transition{ padding-bottom:0; }
+  .store-transition .section-head{ margin-bottom:0; }
+  .store-transition h2{ font-size:clamp(2.5rem, 5vw, 4rem); }
+  .store-transition h2 em{ color:var(--gold); font-style:italic; }
+  .product-picks{ margin-top:4.5rem; }
+  .product-picks .section-head{ margin-bottom:2.4rem; }
+  .product-pick-grid{ display:grid; grid-template-columns:repeat(4, 1fr); gap:1.3rem; }
+  .product-pick{ background:rgba(255,255,255,0.38); border:1px solid var(--glass-border); border-radius:4px 24px 4px 24px; overflow:hidden; box-shadow:0 10px 24px var(--ring-shadow); transition:transform .35s ease, box-shadow .35s ease; }
+  .product-pick:hover{ transform:translateY(-6px); box-shadow:0 18px 30px var(--ring-shadow); }
+  .product-pick img{ display:block; width:100%; aspect-ratio:1/1; object-fit:cover; }
+  .product-pick-body{ padding:1rem 1.1rem 1.2rem; }
+  .product-pick h4{ font-size:1.3rem; margin-bottom:0.3rem; }
+  .product-pick .price{ display:block; margin-top:0.7rem; color:var(--gold); font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase; }
+  .surprise-note{ display:block; margin-top:0.7rem; color:var(--love); font-size:0.75rem; line-height:1.4; }
+  .product-pick .card-link{ margin-top:0.8rem; }
+  .emotional-close{ background:var(--ink); color:var(--cream); text-align:center; }
+  .emotional-close h2{ color:var(--cream); font-size:clamp(2.4rem, 5vw, 4.2rem); }
+  .emotional-close p{ max-width:580px; margin:1rem auto 2rem; color:rgba(255,246,244,0.78); line-height:1.75; }
+  @media (max-width:900px){ .product-pick-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:680px){ .anniversary-process .process-step:not(:last-child)::after{ display:none; } .hero-meta span{ width:100%; } }
+  @media (max-width:520px){ .product-pick-grid{ grid-template-columns:1fr; } }
+
   /* Carrusel promocional continuo */
   .promo-carousel{
     padding:5.5rem 0 6rem;
@@ -1442,10 +1480,9 @@
   </div>
   <div class="nav-links">
     <nav>
-      <a href="#historia">Historia</a>
-      <a href="#promociones">Promociones</a>
+      <a href="#promociones">Aniversario</a>
+      <a href="#coleccion">Categorías</a>
       <a href="#fotos">Fotos</a>
-      <a href="#coleccion">Colección</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </div>
@@ -1468,21 +1505,25 @@
      - <p class="sub">...</p> = Cambiar descripción
      - href en botones = cambiar enlaces
 -->
-<section class="hero">
-  <span class="hero-eyebrow">Variedades · Envíos y entregas a domicilio</span>
-  <h1>Airis <em>Store</em></h1>
-  <p class="sub">Emprendimiento de variedades: las mejores mochilas, bolsos, carteras y relojes. Productos seleccionados con calidad, con envíos y entrega a domicilio.</p>
+<section class="hero anniversary-hero" id="promociones">
+  <span class="hero-eyebrow">💝 Promoción de aniversario</span>
+  <h1>Tú eliges a quién sorprender.<br><em>Nosotros hacemos que la sorpresa llegue.</em></h1>
+  <p class="sub">Compra tu detalle desde hoy y el 21 de septiembre nosotros nos encargamos de hacerlo llegar directamente a esa persona especial.</p>
+  <div class="hero-meta">
+    <span>📅 <strong>Entrega: 21 de septiembre</strong></span>
+    <span>🎁 <strong>Tú eliges el detalle, nosotros hacemos la entrega</strong></span>
+  </div>
   <div class="cta-row">
-    <a class="btn btn-primary" href="https://wa.me/573043312838?text=Hola%20Airis%2C%20quiero%20ver%20la%20colecci%C3%B3n%20de%20variedades" target="_blank" rel="noopener">
-      Escribir por WhatsApp
+    <a class="btn btn-primary" href="https://wa.me/573043312838?text=Hola%20Airis%20Store%20%E2%9D%A4%EF%B8%8F%20Quiero%20participar%20en%20la%20promoci%C3%B3n%20de%20aniversario%20y%20enviar%20un%20detalle%20sorpresa%20el%2021%20de%20septiembre." target="_blank" rel="noopener">
+      QUIERO SORPRENDER A ALGUIEN
     </a>
-    <a class="btn btn-outline" href="#coleccion">Ver colección</a>
+    <a class="btn btn-outline" href="#coleccion">Explorar Airis Store</a>
   </div>
 
   <div class="hero-ring" id="heroRing"></div>
 </section>
 
-<section id="promociones" class="promo-carousel" aria-label="Promociones Airis Store">
+<section class="promo-carousel" aria-label="Imágenes de la promoción de aniversario">
   <div class="promo-heading reveal">
     <span class="eyebrow">Edición especial · Airis Store</span>
     <h2>Promoción <em>Aniversario</em></h2>
@@ -1512,6 +1553,20 @@
     <p>Porque hay personas que merecen saber que las recuerdas. 🫶</p>
     <p>🎁 <strong>Reserva tu detalle desde hoy.</strong><br>📍 Entrega: <strong>21 de septiembre</strong></p>
     <a class="btn btn-primary" href="https://wa.me/573043312838?text=hola%20estoy%20interesado%20en%20la%20promocion%20de%20aniversario" target="_blank" rel="noopener">Reservar mi sorpresa</a>
+  </div>
+</section>
+
+<section class="anniversary-process">
+  <div class="section-head reveal">
+    <span class="eyebrow">Una sorpresa con intención</span>
+    <h2>¿Cómo funciona?</h2>
+    <p>Nos ocupamos de que elegir un detalle especial sea sencillo y memorable.</p>
+  </div>
+  <div class="process reveal">
+    <div class="process-step"><span class="step-number">01</span><div class="glyph" data-glyph="1"></div><h4>Elige tu detalle 🎁</h4><p>Selecciona lo que quieres regalar.</p></div>
+    <div class="process-step"><span class="step-number">02</span><div class="glyph" data-glyph="2"></div><h4>Elige a quién sorprender ❤️</h4><p>Indícanos los datos de la persona que recibirá el detalle.</p></div>
+    <div class="process-step"><span class="step-number">03</span><div class="glyph" data-glyph="3"></div><h4>Nosotros hacemos el resto 🚚</h4><p>Preparamos y coordinamos la sorpresa.</p></div>
+    <div class="process-step"><span class="step-number">04</span><div class="glyph" data-glyph="1"></div><h4>Recíbelo el 21 de septiembre ✨</h4><p>Hacemos llegar el detalle a esa persona especial.</p></div>
   </div>
 </section>
 
@@ -1631,6 +1686,13 @@
      según el data-tone que hayas puesto
 -->
 <section id="coleccion">
+  <div class="store-transition">
+    <div class="section-head reveal">
+      <span class="eyebrow">Descubre Airis Store</span>
+      <h2>¿Y si encuentras algo más? <em>👀</em></h2>
+      <p>Esto no es lo único que tenemos para sorprender. Explora nuestras categorías y encuentra un detalle que se sienta muy tuyo.</p>
+    </div>
+  </div>
   <div class="section-head reveal">
     <span class="eyebrow">Colección</span>
     <h2>Colección — Variedades</h2>
@@ -1693,6 +1755,19 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="product-picks">
+    <div class="section-head reveal">
+      <span class="eyebrow">Para regalar o regalarte</span>
+      <h2>Detalles que pueden convertirse en una sorpresa ❤️</h2>
+    </div>
+    <div class="product-pick-grid reveal">
+      <article class="product-pick"><img src="fotos/mochilatejida/img2.jpg" alt="Mochila tejida Airis Store"><div class="product-pick-body"><h4>Mochila tejida</h4><span class="price">Consultar precio</span><span class="surprise-note">💝 Disponible para sorpresa del 21 de septiembre</span><a class="card-link" href="https://wa.me/573043312838?text=Hola%20Airis%20Store%20%E2%9D%A4%EF%B8%8F%20Quiero%20elegir%20esta%20mochila%20como%20detalle%20sorpresa." target="_blank" rel="noopener">Elegir este detalle</a></div></article>
+      <article class="product-pick"><img src="fotos/bolso/bolso5.jpeg" alt="Bolso Airis Store"><div class="product-pick-body"><h4>Bolso especial</h4><span class="price">Consultar precio</span><span class="surprise-note">💝 Disponible para sorpresa del 21 de septiembre</span><a class="card-link" href="https://wa.me/573043312838?text=Hola%20Airis%20Store%20%E2%9D%A4%EF%B8%8F%20Quiero%20elegir%20este%20bolso%20como%20detalle%20sorpresa." target="_blank" rel="noopener">Elegir este detalle</a></div></article>
+      <article class="product-pick"><img src="fotos/billetera/bille1.jpeg" alt="Cartera Airis Store"><div class="product-pick-body"><h4>Cartera</h4><span class="price">Consultar precio</span><span class="surprise-note">💝 Disponible para sorpresa del 21 de septiembre</span><a class="card-link" href="https://wa.me/573043312838?text=Hola%20Airis%20Store%20%E2%9D%A4%EF%B8%8F%20Quiero%20elegir%20esta%20cartera%20como%20detalle%20sorpresa." target="_blank" rel="noopener">Elegir este detalle</a></div></article>
+      <article class="product-pick"><img src="fotos/reloj/reloj3.jpeg" alt="Reloj Airis Store"><div class="product-pick-body"><h4>Reloj</h4><span class="price">Consultar precio</span><span class="surprise-note">💝 Disponible para sorpresa del 21 de septiembre</span><a class="card-link" href="https://wa.me/573043312838?text=Hola%20Airis%20Store%20%E2%9D%A4%EF%B8%8F%20Quiero%20elegir%20este%20reloj%20como%20detalle%20sorpresa." target="_blank" rel="noopener">Elegir este detalle</a></div></article>
+    </div>
   </div>
 </section>
 
@@ -1849,6 +1924,14 @@
         <span class="value">Valledupar</span>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="emotional-close">
+  <div class="reveal">
+    <h2>Hay personas que merecen saber que las recuerdas. ❤️</h2>
+    <p>No importa si están cerca o lejos. Este 21 de septiembre, nosotros hacemos llegar tu detalle.</p>
+    <a class="btn btn-primary" href="https://wa.me/573043312838?text=Hola%20Airis%20Store%20%E2%9D%A4%EF%B8%8F%20Quiero%20sorprender%20a%20alguien%20el%2021%20de%20septiembre." target="_blank" rel="noopener">QUIERO SORPRENDER</a>
   </div>
 </section>
 
